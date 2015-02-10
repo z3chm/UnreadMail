@@ -31,18 +31,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menubarItem.image = icon
         menubarItem.menu = UnreadMainMenu
         menubarItem.title = "?"
-        
-        sleep(10)
+
         if let inbox = NSMutableDictionary(contentsOfFile: inboxFile) {
             unreadMsgs = inbox.objectForKey("IMAPMailboxUnseenCount") as Int
             menubarItem.title = String(unreadMsgs)
         } else {
             menubarItem.title = "?"
         }
-        
-        sleep(10)
-         menubarItem.title = "?"
-        
     }
 
     @IBAction func QuitClicked(sender: NSMenuItem) {
