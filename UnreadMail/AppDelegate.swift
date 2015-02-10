@@ -12,16 +12,41 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
+    @IBOutlet weak var UnreadMainMenu: NSMenu!
 
+    var menubarItem = NSStatusBar.systemStatusBar().statusItemWithLength(48)
+    var menu: NSMenu = NSMenu()
+    var menuItem: NSMenuItem = NSMenuItem()
+
+    var unreadMsgs: Int = -1
+    var inboxFile = "/Users/zechim/Library/Mail/V2/IMAP-eder.zechim@oracle.com@stbeehive.oracle.com/INBOX.mbox/Info.plist"
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        // Hide app from dock and tab
+        NSApp.setActivationPolicy(NSApplicationActivationPolicy.Accessory)
+
+        // Initialize UnreadMail system tray (statusBar)
+        let icon = NSImage(named: "UnreadMailIconSet")
+        icon?.setTemplate(true)
+        menubarItem.image = icon
+        menubarItem.menu = UnreadMainMenu
+        menubarItem.title = "?"
+        
+        sleep(10)
+        if let inbox = NSMutableDictionary(contentsOfFile: inboxFile) {
+            unreadMsgs = inbox.objectForKey("IMAPMailboxUnseenCount") as Int
+            menubarItem.title = String(unreadMsgs)
+        } else {
+            menubarItem.title = "?"
+        }
+        
+        sleep(10)
+         menubarItem.title = "?"
+        
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+    @IBAction func QuitClicked(sender: NSMenuItem) {
+        NSApplication.sharedApplication().terminate(self)
     }
-
-
 }
 
