@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var timer: NSTimer = NSTimer()
 
     var unread: String = "?"
-    let scriptSource: String = "tell application \"Mail\"\nget unread count of inbox\nend tell"
+    let scriptSource: String = "on is_running()\ntell application \"System Events\" to (name of processes) contains \"Mail\"\nend is_running\nset mailRunning to is_running()\nif mailRunning then\ntell application \"Mail\"\n get unread count of inbox\nend tell\nend if"
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Hide app from dock and tab
@@ -43,6 +43,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var retDesc = script.executeAndReturnError(&errorInfo)
         if(retDesc?.stringValue != nil){
             unread = retDesc!.stringValue!
+        } else {
+            unread = "?"
         }
         menubarItem.title = self.unread
     }
