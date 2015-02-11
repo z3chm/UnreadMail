@@ -11,6 +11,7 @@
 		8A3447A11A897A45004F67B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3447A01A897A45004F67B8 /* Images.xcassets */; };
 		8A3447A41A897A46004F67B8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A3447A21A897A46004F67B8 /* MainMenu.xib */; };
 		8A3447B01A897A46004F67B8 /* UnreadMailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3447AF1A897A46004F67B8 /* UnreadMailTests.swift */; };
+		8AC692DE1A8AE2D300AC3D19 /* UnreadMail.app in Resources */ = {isa = PBXBuildFile; fileRef = 8AC692DD1A8AE2D300AC3D19 /* UnreadMail.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		8A3447A91A897A46004F67B8 /* UnreadMailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnreadMailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3447AE1A897A46004F67B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A3447AF1A897A46004F67B8 /* UnreadMailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnreadMailTests.swift; sourceTree = "<group>"; };
+		8AC692DD1A8AE2D300AC3D19 /* UnreadMail.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = UnreadMail.app; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		8A3447901A897A45004F67B8 = {
 			isa = PBXGroup;
 			children = (
+				8AC692DD1A8AE2D300AC3D19 /* UnreadMail.app */,
 				8A34479B1A897A45004F67B8 /* UnreadMail */,
 				8A3447AC1A897A46004F67B8 /* UnreadMailTests */,
 				8A34479A1A897A45004F67B8 /* Products */,
@@ -186,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AC692DE1A8AE2D300AC3D19 /* UnreadMail.app in Resources */,
 				8A3447A11A897A45004F67B8 /* Images.xcassets in Resources */,
 				8A3447A41A897A46004F67B8 /* MainMenu.xib in Resources */,
 			);
@@ -393,6 +397,7 @@
 				8A3447B51A897A46004F67B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A3447B61A897A46004F67B8 /* Build configuration list for PBXNativeTarget "UnreadMailTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +406,7 @@
 				8A3447B81A897A46004F67B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
