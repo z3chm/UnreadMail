@@ -10,7 +10,7 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		60OsaMm9cR9TYI/T/7X0g7ndQiU=
+		pVOUhZLnVidBCDyJwAaAIKwe1Zc=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
@@ -21,6 +21,75 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftAppKit.dylib</key>
+		<data>
+		8+k7G0zchI3nkw/RA80EspPvruE=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftCore.dylib</key>
+		<data>
+		kWJGvE3RF8l8eONIU2cgO+Xrvws=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftCoreGraphics.dylib</key>
+		<data>
+		dD14PAf2jEzBLKP4YoN3bJOOdFk=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftDarwin.dylib</key>
+		<data>
+		IBSZDwQsWg+fUPc41N6E05IJo0Y=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftDispatch.dylib</key>
+		<data>
+		cMsP+VBojW4imWoA2rytkMeEzRM=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftFoundation.dylib</key>
+		<data>
+		NuFBSsi75JZRLSOjq3Pb5LCtwr0=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftObjectiveC.dylib</key>
+		<data>
+		INMmM0eLXOFMxtvmnJtc0m0Ebr4=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftQuartzCore.dylib</key>
+		<data>
+		QS6m+ZoX/2EfBkoqm24iCWFFpo4=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftSecurity.dylib</key>
+		<data>
+		wa5gznowZ/presWknnQQpgFt4O0=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Info.plist</key>
+		<data>
+		guwn62te7+IidW2h3r/Lpaj/7zo=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/MacOS/UnreadMail</key>
+		<data>
+		zimLeKRAR9WkalfqDAkOa5RdkhY=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/PkgInfo</key>
+		<data>
+		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Resources/AppIcon.icns</key>
+		<data>
+		GY3lZRDvzESFp0vgu8YzTI+fgQo=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Resources/Assets.car</key>
+		<data>
+		60OsaMm9cR9TYI/T/7X0g7ndQiU=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Resources/Base.lproj/MainMenu.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QipWnUYuidygZX4/1QeZk0DIZzc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/UnreadMail.app/Contents/_CodeSignature/CodeResources</key>
+		<data>
+		o4zqHidMMvD8kSE2/ri6iQsGJ1w=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -111,7 +180,7 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		60OsaMm9cR9TYI/T/7X0g7ndQiU=
+		pVOUhZLnVidBCDyJwAaAIKwe1Zc=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
@@ -122,6 +191,75 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftAppKit.dylib</key>
+		<data>
+		8+k7G0zchI3nkw/RA80EspPvruE=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftCore.dylib</key>
+		<data>
+		kWJGvE3RF8l8eONIU2cgO+Xrvws=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftCoreGraphics.dylib</key>
+		<data>
+		dD14PAf2jEzBLKP4YoN3bJOOdFk=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftDarwin.dylib</key>
+		<data>
+		IBSZDwQsWg+fUPc41N6E05IJo0Y=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftDispatch.dylib</key>
+		<data>
+		cMsP+VBojW4imWoA2rytkMeEzRM=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftFoundation.dylib</key>
+		<data>
+		NuFBSsi75JZRLSOjq3Pb5LCtwr0=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftObjectiveC.dylib</key>
+		<data>
+		INMmM0eLXOFMxtvmnJtc0m0Ebr4=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftQuartzCore.dylib</key>
+		<data>
+		QS6m+ZoX/2EfBkoqm24iCWFFpo4=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Frameworks/libswiftSecurity.dylib</key>
+		<data>
+		wa5gznowZ/presWknnQQpgFt4O0=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Info.plist</key>
+		<data>
+		guwn62te7+IidW2h3r/Lpaj/7zo=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/MacOS/UnreadMail</key>
+		<data>
+		zimLeKRAR9WkalfqDAkOa5RdkhY=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/PkgInfo</key>
+		<data>
+		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Resources/AppIcon.icns</key>
+		<data>
+		GY3lZRDvzESFp0vgu8YzTI+fgQo=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Resources/Assets.car</key>
+		<data>
+		60OsaMm9cR9TYI/T/7X0g7ndQiU=
+		</data>
+		<key>Resources/UnreadMail.app/Contents/Resources/Base.lproj/MainMenu.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			QipWnUYuidygZX4/1QeZk0DIZzc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/UnreadMail.app/Contents/_CodeSignature/CodeResources</key>
+		<data>
+		o4zqHidMMvD8kSE2/ri6iQsGJ1w=
+		</data>
 	</dict>
 	<key>rules</key>
 	<dict>
