@@ -88,7 +88,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func PrefClicked(sender: NSMenuItem) {
-        self.PrefWindow!.orderFrontRegardless()
+        self.PrefWindow!.orderFront(self)
     }
     
     @IBAction func CloseClicked(sender: NSButton) {
