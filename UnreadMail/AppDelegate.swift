@@ -22,7 +22,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var timer: NSTimer = NSTimer()
     
-    var unreadMsgs: Int = -1
     var inboxFile: String = ""
     let inboxPrefix: String = NSHomeDirectory() + "/Library/Mail/V2/"
     let inboxSuffix: String = "/INBOX.mbox/Info.plist"
@@ -31,19 +30,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Hide app from dock and tab
         NSApp.setActivationPolicy(NSApplicationActivationPolicy.Accessory)
+        timer = NSTimer.scheduledTimerWithTimeInterval(30, target:self, selector: Selector("checkInbox"), userInfo: nil, repeats: true)
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(10, target:self, selector: Selector("checkInbox"), userInfo: nil, repeats: true)
-        
-    }
-
-    override func awakeFromNib() {
-        // Initialize UnreadMail system tray (statusBar)
-        let icon = NSImage(named: "UnreadMailIconSet")
-        icon?.setTemplate(true)
-        menubarItem.image = icon
-        menubarItem.menu = UnreadMainMenu
-        menubarItem.title = "?"
-
         self.getInboxFile()
         
         if ( self.inboxFile == "" ) {
@@ -59,15 +47,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 }
             }
         }
-        
+    }
+
+    override func awakeFromNib() {
+        // Initialize UnreadMail system tray (statusBar)
+        let icon = NSImage(named: "UnreadMailIconSet")
+        icon?.setTemplate(true)
+        menubarItem.image = icon
+        menubarItem.menu = UnreadMainMenu
+        menubarItem.title = "?"
         self.checkInbox()
     }
     
     func checkInbox(){
         NSLog("Trying to read " + inboxFile)
         if let inbox = NSMutableDictionary(contentsOfFile: inboxFile) {
-            unreadMsgs = inbox.objectForKey("IMAPMailboxUnseenCount") as Int
-            menubarItem.title = String(unreadMsgs)
+            if let unread = inbox.objectForKey("IMAPMailboxUnseenCount") as? Int {
+                menubarItem.title = String(unread)
+            }
         } else {
             menubarItem.title = "?"
         }
