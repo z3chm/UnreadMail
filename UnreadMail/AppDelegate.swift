@@ -34,18 +34,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menubarItem.title = unread
         menubarItem.menu = UnreadMainMenu
         updateUnreadCount()
-        timer = NSTimer.scheduledTimerWithTimeInterval(30, target:self, selector: Selector("updateUnreadCount"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(6, target:self, selector: Selector("updateUnreadCount"), userInfo: nil, repeats: true)
     }
     
     func updateUnreadCount(){
-        NSLog("getUnreadCount(): " + unread)
         let script: NSAppleScript = NSAppleScript(source: scriptSource)!
         var errorInfo: NSDictionary?
         var retDesc = script.executeAndReturnError(&errorInfo)
         if(retDesc?.stringValue != nil){
             unread = retDesc!.stringValue!
         }
-        NSLog("getUnreadCount(): " + unread)
         menubarItem.title = self.unread
     }
     
