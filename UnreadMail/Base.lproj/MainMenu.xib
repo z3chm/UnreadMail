@@ -13,12 +13,21 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="UnreadMail" customModuleProvider="target">
             <connections>
+                <outlet property="InboxList" destination="h5O-rF-pkQ" id="nSk-q9-eSl"/>
+                <outlet property="PrefWindow" destination="Twq-84-33E" id="LCW-CA-5Z3"/>
                 <outlet property="UnreadMainMenu" destination="Ev0-mw-lFI" id="Qa4-il-8G2"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu id="Ev0-mw-lFI">
             <items>
+                <menuItem title="Preferences..." id="h3l-MU-JmN">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="PrefClicked:" target="Voe-Tx-rLC" id="R5X-ao-rCS"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="T9b-dg-ynV"/>
                 <menuItem title="Quit" id="ox0-e2-w6c">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -26,7 +35,49 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="-163.5" y="80.5"/>
+            <point key="canvasLocation" x="-741" y="-24.5"/>
         </menu>
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Twq-84-33E" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="974" y="746" width="423" height="105"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <view key="contentView" id="iC1-3i-YLW">
+                <rect key="frame" x="0.0" y="0.0" width="423" height="105"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l8V-hL-kVt">
+                        <rect key="frame" x="18" y="64" width="134" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select your mailbox: " id="e3k-dZ-e42">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5O-rF-pkQ">
+                        <rect key="frame" x="158" y="57" width="248" height="26"/>
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" inset="2" arrowPosition="arrowAtCenter" id="J0f-eT-Hzi">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <menu key="menu" id="V7m-9a-lPd"/>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="InboxSelection:" target="Voe-Tx-rLC" id="RaE-qM-H5A"/>
+                        </connections>
+                    </popUpButton>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6C4-F9-6WS">
+                        <rect key="frame" x="333" y="13" width="76" height="32"/>
+                        <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UcI-2Q-r4G">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="CloseClicked:" target="Voe-Tx-rLC" id="fBn-N5-c1n"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="-667.5" y="117.5"/>
+        </window>
     </objects>
 </document>
